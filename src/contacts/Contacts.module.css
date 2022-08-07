@@ -8,6 +8,22 @@
     justify-content: flex-start;
 }
 
+.contactsContainer > a {
+    width: max-content;
+    text-decoration: none;
+    color: black;
+    background-color: #929292;
+    padding: 10px;
+    margin: 50px;
+}
+
+.contactsContainer > a:hover {
+    text-decoration: none;
+    box-shadow: 0 0 5px 5px coral;
+    background-color: #929292;
+    cursor: pointer;
+}
+
 .formBlock {
     display: flex;
     flex-direction: inherit;
@@ -19,9 +35,4 @@
 
 .title {
     background-color: chocolate;
-}
-
-.formBlock > button {
-    width: max-content;
-    align-self: center;
 }

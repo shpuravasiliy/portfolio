@@ -16,8 +16,8 @@ const Contacts = () => {
                         cols={30}
                         rows={10}
                     ></textarea>
-                    <button>Отправить</button>
                 </form>
+                <a href=''>Отправить</a>
             </div>
         </div>
     );
