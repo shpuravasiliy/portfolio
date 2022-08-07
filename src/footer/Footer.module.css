@@ -1,0 +1,24 @@
+.footer {
+    height: max-content;
+    background-color: #99d0fb;
+    display: flex;
+    align-self: flex-end;
+
+}
+
+.footerContainer {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footerContainer > h3 {
+background-color: chocolate;
+}
+
+.contactsBlock {
+    border: 1px solid;
+    width: 285px;
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+}
