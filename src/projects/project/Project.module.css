@@ -1,0 +1,42 @@
+.project {
+    min-width: 285px;
+    max-width: 320px;
+    background-color: darkkhaki;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imageBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.imageBlock > a {
+    text-decoration: none;
+    color: black;
+    background-color: #929292;
+    padding: 10px;
+}
+
+.imageBlock > a:hover {
+    text-decoration: none;
+    box-shadow: 0 0 5px 5px bisque;
+    background-color: #929292;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.title {
+    background-color: bisque;
+}
+
+.description {
+    text-align: center;
+    background-color: chocolate;
+}

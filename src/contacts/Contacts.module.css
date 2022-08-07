@@ -1,0 +1,27 @@
+.contactsBlock {
+    height: 100vh;
+    background-color: #fde1e1;
+}
+
+.contactsContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.formBlock {
+    display: flex;
+    flex-direction: inherit;
+    width: 50%;
+    min-width: 280px;
+    max-width: 350px;
+    gap: 15px;
+}
+
+.title {
+    background-color: chocolate;
+}
+
+.formBlock > button {
+    width: max-content;
+    align-self: center;
+}
