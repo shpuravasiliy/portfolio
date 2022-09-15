@@ -1,5 +1,4 @@
 .contactsBlock {
-    height: 100vh;
     background-color: #fde1e1;
 }
 
@@ -8,16 +7,18 @@
     justify-content: flex-start;
 }
 
-.contactsContainer > a {
+.submitBtn {
     width: max-content;
     text-decoration: none;
     color: black;
     background-color: #929292;
     padding: 10px;
-    margin: 50px;
+    margin: 15px auto;
+    border: none;
+    font-size: 16px;
 }
 
-.contactsContainer > a:hover {
+.submitBtn:hover {
     text-decoration: none;
     box-shadow: 0 0 5px 5px coral;
     background-color: #929292;
@@ -27,12 +28,16 @@
 .formBlock {
     display: flex;
     flex-direction: inherit;
-    width: 50%;
-    min-width: 280px;
-    max-width: 350px;
+    width: 300px;
     gap: 15px;
 }
 
 .title {
     background-color: chocolate;
+}
+
+@media screen and (max-width: 380px) {
+    .formBlock {
+        width: 100%;
+    }
 }

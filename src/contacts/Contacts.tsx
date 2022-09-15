@@ -15,9 +15,9 @@ const Contacts = () => {
                         id=""
                         cols={30}
                         rows={10}
-                    ></textarea>
+                    />
+                    <button type={'submit'} className={style.submitBtn}>Отправить</button>
                 </form>
-                <a href=''>Отправить</a>
             </div>
         </div>
     );

@@ -1,13 +1,13 @@
 import React, {FC} from 'react';
 import style from './FooterItem.module.css';
+import {socialMediaType} from '../../content/contentData';
 
-type FooterItemPropsType = {
+type FooterItemPropsType = socialMediaType
 
-}
-
-const FooterItem: FC<FooterItemPropsType> = (props) => {
+const FooterItem: FC<FooterItemPropsType> = ({title, icon}) => {
     return (
         <div className={style.footerItemBlock}>
+            <div className={style.title}>{title}</div>
         </div>
     );
 };

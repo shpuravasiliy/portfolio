@@ -1,0 +1,63 @@
+@import "./src/common/styles/sass/variables";
+
+.titleBlock {
+    margin: 40px 0;
+    width: 100%;
+    display: block;
+    text-align: left;
+    .title {
+        color: $textPrimaryColor;
+        font-size: 24px;
+        font-family: "Oswald", Helvetica, sans-serif;
+        font-weight: 400;
+        font-style: initial;
+        letter-spacing: 0;
+        background-color: $primaryColor;
+        display: inline-block;
+        position: relative;
+        margin: 0 0 0 -10px;
+        padding: 10px 20px 10px 78px;
+        line-height: 1.1em;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, .1);
+        &::after {
+            box-sizing: border-box;
+            display: block;
+            width: 10px;
+            height: 0;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            content: "";
+            border-bottom: 10px solid transparent;
+            z-index: 0;
+            border-right: 10px solid #000;
+            opacity: .12;
+        }
+        &::before {
+            box-sizing: border-box;
+            display: block;
+            width: 10px;
+            height: 0;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            content: "";
+            border-bottom: 10px solid transparent;
+            border-right: 10px solid $primaryColor;
+            z-index: 0;
+        }
+    }
+    .titleDescription {
+        display: inline-block;
+        margin: 0 0 0 15px;
+        font-size: 14px;
+        font-weight: 200;
+        color: $textSecondaryColor;
+    }
+}
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+.skillsBlock {
+    .skillsContainer {
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+
+        .title {
+            background-color: bisque;
+        }
+
+        .skills {
+            /*border: 1px solid;*/
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            @media screen and (min-width: 642px) {
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+

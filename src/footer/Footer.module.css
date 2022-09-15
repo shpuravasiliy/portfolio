@@ -1,24 +1,28 @@
 .footer {
-    height: max-content;
     background-color: #99d0fb;
     display: flex;
     align-self: flex-end;
-
 }
 
 .footerContainer {
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
-.footerContainer > h3 {
-background-color: chocolate;
+.title {
+    background-color: chocolate;
 }
 
 .contactsBlock {
-    border: 1px solid;
-    width: 285px;
-    height: max-content;
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
     justify-content: space-between;
+}
+
+@media screen and (min-width: 320px) {
+    .contactsBlock {
+        width: 250px;
+    }
 }

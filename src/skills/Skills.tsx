@@ -1,21 +1,28 @@
-import React from 'react';
-import style from './Skills.module.css';
+import React, {FC} from 'react';
+import style from './Skills.module.scss';
 import styleContainer from '../common/styles/Container.module.css';
 import Skill from './skill/Skill';
+import {SectionType, skillsType} from '../content/contentData';
+import {Title} from '../common/components/Title/Title';
 
-export const descriptionExample1 = 'Lorem ipsum dolor sit amet, consectetur'
-export const descriptionExample2 = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim...'
-export const descriptionExample3 = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor '
+type SkillsPropsType = {
+    skills: SectionType<skillsType[]>
+}
 
-const Skills = () => {
+const Skills: FC<SkillsPropsType> = ({skills}) => {
     return (
         <div className={style.skillsBlock}>
             <div className={`${styleContainer.container} ${style.skillsContainer}`}>
-                <h2 className={style.title}>Скиллы</h2>
+                <Title
+                    title={skills.title}
+                    description={skills.titleDescription}
+                />
                 <div className={style.skills}>
-                    <Skill title={'JS'} description={descriptionExample1}/>
-                    <Skill title={'CSS'} description={descriptionExample2}/>
-                    <Skill title={'React'} description={descriptionExample3}/>
+                    {skills.data.map(p => <Skill
+                        key={p.title}
+                        title={p.title}
+                        description={p.description}
+                    />)}
                 </div>
             </div>
         </div>

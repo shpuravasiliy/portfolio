@@ -1,24 +1,29 @@
-import React from 'react';
-import style from './Projects.module.css';
+import React, {FC} from 'react';
+import style from './Projects.module.scss';
 import styleContainer from '../common/styles/Container.module.css';
 import Project from './project/Project';
-import img1 from '../common/images/p2-2.png'
-import img2 from '../common/images/p4-4.png'
-import img3 from '../common/images/p3-3.png'
-import {descriptionExample1, descriptionExample2, descriptionExample3} from '../skills/Skills';
+import {SectionType, projectsType} from '../content/contentData';
+import {Title} from '../common/components/Title/Title';
 
-// const img1 = url('../common/images/p2-2.jpg')
+type ProjectsPropsType = {
+    projects: SectionType<projectsType[]>
+}
 
-
-const Projects = () => {
+const Projects: FC<ProjectsPropsType> = ({projects}) => {
     return (
         <div className={style.projectsBlock}>
             <div className={`${styleContainer.container} ${style.projectsContainer}`}>
-                <h2 className={style.title}>Projects</h2>
+                <Title
+                    title={projects.title}
+                    description={projects.titleDescription}
+                />
                 <div className={style.projects}>
-                    <Project image={img1} title={'Social network'} description={descriptionExample1}/>
-                    <Project image={img2} title={'Todolist'} description={descriptionExample2}/>
-                    <Project image={img3} title={'Some project'} description={descriptionExample3}/>
+                    {projects.data.map(p => <Project
+                        key={p.title}
+                        image={p.image}
+                        title={p.title}
+                        description={p.description}
+                    />)}
                 </div>
             </div>
         </div>

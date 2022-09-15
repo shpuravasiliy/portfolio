@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import style from './Project.module.css';
+import style from './Project.module.scss';
 
 type ProjectPropsType = {
     image: string
@@ -7,14 +7,21 @@ type ProjectPropsType = {
     description: string
 }
 
-const Project: FC<ProjectPropsType> = (props) => {
+const Project: FC<ProjectPropsType> = ({image, title, description}) => {
+
+    const bgImage = {
+        backgroundImage: `url(${image})`
+    }
+
     return (
         <div className={style.project}>
-            <div className={style.imageBlock} style={{backgroundImage: `url(${props.image})`}}>
-                <a href=''>Смотреть</a>
+            <div className={style.imageBlock} style={bgImage}>
+                <a href="" className={style.viewBtn}>Смотреть</a>
             </div>
-                <h3 className={style.title}>{props.title}</h3>
-                <span className={style.description}>{props.description}</span>
+            <div className={style.infoBlock}>
+                <h3 className={style.title}>{title}</h3>
+                <p className={style.description}>{description}</p>
+            </div>
         </div>
     );
 };
