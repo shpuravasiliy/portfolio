@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import style from './Project.module.scss';
+import style from './Project.module.sass';
 
 type ProjectPropsType = {
     image: string

@@ -1,0 +1,44 @@
+//@import "./variables";
+//
+//@mixin text($font-family: "Oswald", $font-size: initial, $line-height: initial, $color: $textPrimaryColor) {
+//  font-family: $font-family, Helvetica, sans-serif;
+//  font-size: $font-size;
+//  line-height: $line-height;
+//  color: $color;
+//}
+//
+////@mixin font($font-family: "Oswald") {
+////  font-family: $font-family, Helvetica, sans-serif;
+////}
+//
+//@mixin phone {
+//  @media (max-width: 600px) {
+//    @content
+//  }
+//}
+
+@import "./variables"
+
+@mixin text($font-family: "Oswald", $font-size: initial, $line-height: initial, $color: $textPrimaryColor)
+  font-family: $font-family, Helvetica, sans-serif
+  font-size: $font-size
+  line-height: $line-height
+  color: $color
+
+@mixin phone
+  @media (max-width: 600px)
+    @content
+
+@mixin respond($breakpoint)
+  @if $breakpoint == phone
+    @media (max-width: 600px)
+      @content
+  @if $breakpoint == tab-port
+    @media (max-width: 900px)
+      @content
+  @if $breakpoint == tab-land
+    @media (max-width: 1200px)
+      @content
+  @if $breakpoint == tab-land
+    @media (min-width: 1800px)
+      @content

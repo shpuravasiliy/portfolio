@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import style from './Projects.module.scss';
+import style from './Projects.module.sass';
 import styleContainer from '../common/styles/Container.module.css';
 import Project from './project/Project';
 import {SectionType, projectsType} from '../content/contentData';

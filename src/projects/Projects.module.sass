@@ -1,0 +1,49 @@
+//@import "../common/styles/sass/mixins";
+//
+//.projectsBlock {
+//    .projectsContainer {
+//        flex-direction: column;
+//        justify-content: flex-start;
+//        flex-wrap: nowrap;
+//
+//        .projects {
+//            width: 100%;
+//            display: flex;
+//            justify-content: space-between;
+//            flex-wrap: wrap;
+//            gap: 10px;
+//            @include phone {
+//                justify-content: center;
+//            }
+//            //@media screen and (max-width: 1129px) {
+//            //    justify-content: center;
+//            //}
+//        }
+//    }
+//}
+
+@import "../common/styles/sass/mixins"
+
+.projectsBlock
+    .projectsContainer
+        flex-direction: column
+        justify-content: flex-start
+        flex-wrap: nowrap
+
+        .projects
+            width: 100%
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+            gap: 1rem
+            //@include phone
+            //    justify-content: center
+            @include respond(tab-land)
+                justify-content: center
+            @include respond(tab-port)
+                justify-content: center
+            @include respond(phone)
+                justify-content: center
+
+
+
